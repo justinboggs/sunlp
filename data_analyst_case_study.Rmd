@@ -1,0 +1,263 @@
+---
+title: "Data Analyst Case Study"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+# Introduction
+
+As the largest fuel distributor in the US, Sunoco sells ~7 Billion gallons of fuel annually between its wholesale and retail businesses.
+
+Specifically, the retail business is made up of a network of 2,500 Sunoco-branded gas stations across most of the central and eastern US. This highly profitable business accounts for 25% of all the fuel volume (~1.7B gallons), but nearly 60% of total gross profit the company generates.
+
+A key driver of the business’s profitability is the fact that Sunoco owns (land & building) 25% of the 2,500 gas stations in operation. As a result, these sites typically generate higher gross profit due to the higher margin Sunoco makes on each gallon of gas sold and the rent we receive as an additional income stream.
+
+Every day, Pricing Analysts implement hundreds of prices based on the latest data.  The data assessed for pricing can be both quantitative (e.g. the price of competitors) and qualitative (e.g. the "quality" of the site).  Pricing Analysts are constantly assessing information in order to balance the fuel volume sold and gross profit earned per gallon.
+
+As a Data Analyst under the Pricing team, your goal is to assist Pricing Analysts by delivering the data they need to make an optimal pricing decision.  This process involves tidying data, transforming features, visualization, predictive modeling, and effectively communicating insights.  The following sections will assess your critical thinking as well as your programming proficiency.
+
+\newpage
+
+# SQL
+
+## The SQL Request:
+
+A stakeholder wants to better understand Sunoco's credit card transaction data.  This data will help the stakeholder understand how sites are performing across several Key Performance Indicators (KPIs), as well as giving insights into specific products sold at the site.  Please help fulfill the stakeholder's various requests below.
+
+#### Instructions:
+
+You will be provided a file that contains a sample of the database structure.  You will also be given a series of questions in the form of data requests by various stakeholders.  Use the Tableau Packaged Workbook provided to create a SQL query that addresses the data request.  Each question should be solved with a single query.  If you have any questions, please speak to your hiring manager.
+
+```{sql SQL Example Code Chunk}
+
+-- Write your code and documentation here.
+
+SELECT *
+FROM Table_Name
+
+```
+
+\newpage
+
+#### Question #1:
+
+Please query all of the individual rows for each transaction from the `factSalesTransaction` table.
+
+```{sql}
+
+-- Write your code and documentation here.
+
+```
+
+\newpage
+
+#### Question #2:
+
+The `factSalesTransaction` table has a row for each individual transaction.  Please summarize the `factSalesTransaction` table.  The summarized output should be aggregated totals by site and by day for the following KPIs:
+
+*   `TotalSalesAmount`
+*   `Dispensed Fuel & Additives Amount`
+*   `Dispensed Fuel & Additives Quantity`
+*   `Merchandise Amount`
+*   `Merchandise Quantity`
+
+```{sql}
+
+-- Write your code and documentation here.
+
+```
+
+\newpage
+
+#### Question #3:
+
+While the `factSalesTransaction` table has the `ShipTo` column (a unique ID for a single site), the table does not contain additional location information about the sites.  Location information is stored in the `dimLocation` table.  Please add the following location information to the summarized KPIs from Question #2:
+
+*   `ShipToState`
+*   `StoreBrand`
+*   `FuelBrand`
+*   `Latitude`
+*   `Longitude`
+
+**Note that `factSalesTransaction.ShipTo` is the same as `dimLocation.ShipToNumber`.**
+
+```{sql}
+
+-- Write your code and documentation here.
+
+```
+
+\newpage
+
+#### Question #4:
+
+Please query the average annual site performance between `2018-01-01` and `2020-12-31` by `ShipToState` and `FuelBrand` for the following KPIs:
+
+*   `TotalSalesAmount`
+*   `Dispensed Fuel & Additives Amount`
+*   `Dispensed Fuel & Additives Quantity`
+*   `Merchandise Amount`
+*   `Merchandise Quantity`
+
+```{sql}
+
+-- Write your code and documentation here.
+
+```
+
+\newpage
+
+# R & Python
+
+### The Data Prep Request:  
+
+In the fuel industry, the pricing landscape is constantly changing due to a wide variety of factors.  For example, cost for fuel can change drastically day-to-day, fuel demand can vary, and competitors can change their pricing strategies.  In order to price effectively, Pricing Analysts need to consolidate a significant amount of data in order to decide on a pricing strategy and then implement it.
+
+A Pricing Analyst was just assigned a new set of sites to take over pricing responsibilities for.  Since this is an entirely new region, they want to undertake a review of the new sites in order to be better understand how to price them.  These sites have been reporting data for price, volume, margin, replacement cost, and competitor pricing by day and by fuel product.  The Pricing Analyst needs help analyzing each site's historical performance and discovering insights from the data that they can use when a site's pricing landscape changes.
+
+#### Instructions:
+
+You will be provided datasets that must be used to answer a series of open-response questions.  Use your choice of R or Python to answer each question.  You may use multiple code chunks for a single question; be sure to name each code chunk.  You are limited to the languages R and Python, which may be used exclusively or interchangeably.  Please be sure to document your code in order to explain your thought process.
+
+Feel free to use any packages or libraries you are comfortable with.
+
+```{r R Example Code Chunk}
+
+# Write your code and documentation here.
+
+print("Hello world!")
+
+```
+
+```{python Python Example Code Chunk}
+
+# Write your code and documentation here.
+
+print("Hello world!")
+
+```
+
+\newpage
+
+#### Question #1:
+
+The Pricing Analyst comes to you with the following key-performance indicators (KPIs): `site_price`, `site_volume`, `site_profit`, `site_replacement_cost`, and `competitor_pricing`.
+
+The Pricing Analyst needs help cleaning the datasets, as there are inconsistencies across each of them.  For each dataset, please document what the initial error was and how you decided to address it.  Whenever you finalize a new column, please add the suffix `_Adjusted` to the original column name.  For example, the finalized column based on `Profit` would be named `Profit_Adjusted`.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
+
+\newpage
+
+#### Question #2:
+
+Now that the datasets are cleaned, the Pricing Analyst would like you to combine them into a dataset called `site_kpis` and provide summary of the KPIs by site and by fuel grade (`Grade_Description`).  The summaries should include statistical and visualization pieces.  The statistics you choose should provide an initial idea about how the sites are performing.  The the visualizations should illuminate any relationships between each of the KPIs.  For each summary you create, please document any insight you would communicate to the Pricing Analyst.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
+
+\newpage
+
+#### Question #3:
+
+Please use for-loops to answer the following requests:
+
+*    Determine the type of each column in `site_kpis`.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
+
+*    Compute the mean of every `numeric` column in `site_kpis`.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
+
+*    Compute the number of unique values in each column of `site_kpis`.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
+
+\newpage
+
+### The Data Science Request: 
+
+With the summaries you provided, the Pricing Analyst better understands the historical performance of the sites.  Next, the Pricing Analyst would like to explore the relationships between various KPIs.  In order to answer the next set of questions, they will need your help implementing various supervised modeling techniques using the historical data.
+
+#### Instructions:
+
+You will be use the `site_kpis` dataset you created earlier to answer a series of open-response questions.  Use your choice of R or Python to answer each question.  This section of the test is likely going to require multiple steps in order to answer a single question.  When answering these questions, please separate and name your code chunks when implementing different steps.  Feel free to use as many code chunks you feel is appropriate to answer the question.
+
+You are limited to the languages R and Python, which may be used exclusively or interchangeably.  Please be sure to document your code in order to explain your thought process.
+
+Feel free to use any packages or libraries you are comfortable with.
+
+```{r}
+
+# Write your code and documentation here.
+
+print("Hello world!")
+
+```
+
+```{python}
+
+# Write your code and documentation here.
+
+print("Hello world!")
+
+```
+
+\newpage
+
+#### Question #1:
+
+The Pricing Analyst wants to understand the relationship between competitor prices and fuel costs.  Create a model that explores this relationship and explain the output of the model.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
+
+\newpage
+
+#### Question #2:
+
+The Pricing Analyst wants to know how different pricing strategies would affect the amount of Regular fuel sold.  For each site, evaluate how much Regular fuel would be sold over the next 3 months when pricing within a range of \$0.05 below and \$0.05 above the competitor's pricing.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
+
+\newpage
+
+#### Question #3:
+
+The Pricing Analyst wants to know how different pricing strategies would affect the amount of profit generated across all the fuel sold at a site.  For each site, determine the price within a range of \$0.05 below and \$0.05 above the competitor's pricing for each fuel grade that maximizes the total profit.  For this question, you can assume cost is constant.
+
+```{r_or_python}
+
+# Write your code and documentation here.
+
+```
