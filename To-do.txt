@@ -1,3 +1,5 @@
+Python 
+
 To-do 
 - explore 
 - clean
@@ -14,3 +16,12 @@ dates
 - sprofit 01/01/19-12/31/20
 - sreplace 12/01/18 - 04/01/21
 - svol 01/01/19 - 12/31/20
+
+
+
+
+
+
+SQL 
+
+To-do 
