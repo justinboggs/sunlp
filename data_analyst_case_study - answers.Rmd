@@ -150,7 +150,11 @@ The Pricing Analyst needs help cleaning the datasets, as there are inconsistenci
 
 ```{r_or_python}
 
-# Write your code and documentation here.
+Competitor pricing has many null values to be removed.
+Site prices has 
+Site profit has many null values to be removed.
+Site replacement has
+Site volume has many null values to be removed.
 
 ```
 
