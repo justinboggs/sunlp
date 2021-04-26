@@ -151,7 +151,7 @@ The Pricing Analyst needs help cleaning the datasets, as there are inconsistenci
 ```{r_or_python}
 
 Competitor pricing has many null values to be removed. DONE
-Site prices has 
+Site prices has dates outside common range to be removed. DONE
 Site profit has many null values to be removed. DONE
 Site replacement has dates outside common range that need to be removed. DONE
 Site volume has many null values to be removed. DONE
