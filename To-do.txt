@@ -10,8 +10,8 @@ To-do
 - answer questions 
 - pycaret
 
-dates 
-- cprices 08/27/19-12/31/20
+dates COMMON 01/01/19-12/31/20
+- cprices 01/01/19-12/31/20
 - sprices 01/01/19-12/31/20
 - sprofit 01/01/19-12/31/20
 - sreplace 12/01/18 - 04/01/21
