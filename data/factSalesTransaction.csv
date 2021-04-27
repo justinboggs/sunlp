@@ -1,4 +1,4 @@
-SalesTransactionID,SaleDateTime,LocationID,ShipTo,SaleAmount,SaleTaxAmount,TotalSaleAmount,FeeAmount,FeePcntRate,PerTranAmount,Dispensed Fuel & Additives Quantity,Dispensed Fuel & Additives Amount,Merchandise Quantity,Merchandise Amount
+SalesTransactionID,SaleDateTime,LocationID,ShipTo,SaleAmount,SaleTaxAmount,TotalSaleAmount,FeeAmount,FeePcntRate,PerTranAmount,Dispensed_Fuel_Additives_Quantity,Dispensed_Fuel_Additives_Amount,Merchandise_Quantity,Merchandise_Amount
 3187860947,21:00.0,11771,587209800,5.42,0.13,5.42,-0.23,0.0095,0.18,0,0,2,5.29
 3187861928,19:00.0,9380,66065400,5.35,0.35,5.35,-0.23,0.0095,0.18,0,0,2,5
 3187862075,24:00.0,14391,896033800,5.64,0.16,5.64,-0.23,0.0095,0.18,0,0,2,5.48
