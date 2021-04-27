@@ -25,11 +25,15 @@ As a Data Analyst under the Pricing team, your goal is to assist Pricing Analyst
 
 ## The SQL Request:
 
-A stakeholder wants to better understand Sunoco's credit card transaction data.  This data will help the stakeholder understand how sites are performing across several Key Performance Indicators (KPIs), as well as giving insights into specific products sold at the site.  Please help fulfill the stakeholder's various requests below.
+A stakeholder wants to better understand Sunoco's credit card transaction data.  
+This data will help the stakeholder understand how sites are performing across several Key Performance Indicators (KPIs), as well as giving insights into specific products sold at the site.
+Please help fulfill the stakeholder's various requests below.
 
 #### Instructions:
 
-You will be provided a file that contains a sample of the database structure.  You will also be given a series of questions in the form of data requests by various stakeholders.  Use the Tableau Packaged Workbook provided to create a SQL query that addresses the data request.  Each question should be solved with a single query.  If you have any questions, please speak to your hiring manager.
+You will be provided a file that contains a sample of the database structure.  You will also be given a series of questions in the form of data requests by various stakeholders.  
+Use the Tableau Packaged Workbook provided to create a SQL query that addresses the data request.  Each question should be solved with a single query.  
+If you have any questions, please speak to your hiring manager.
 
 ```{sql SQL Example Code Chunk}
 
@@ -42,7 +46,7 @@ FROM Table_Name
 
 \newpage
 
-#### Question #1: DONE
+#### Question #1: DONE 
 
 Please query all of the individual rows for each transaction from the `factSalesTransaction` table.
 
@@ -55,9 +59,10 @@ SELECT * FROM factsalestransaction
 
 \newpage
 
-#### Question #2:
+#### Question #2: DONE
 
-The `factSalesTransaction` table has a row for each individual transaction.  Please summarize the `factSalesTransaction` table.  The summarized output should be aggregated totals by site and by day for the following KPIs:
+The `factSalesTransaction` table has a row for each individual transaction.  Please summarize the `factSalesTransaction` table.  
+The summarized output should be aggregated totals by site and by day for the following KPIs:
 
 *   `TotalSalesAmount`
 *   `Dispensed Fuel & Additives Amount`
@@ -67,15 +72,19 @@ The `factSalesTransaction` table has a row for each individual transaction.  Ple
 
 ```{sql}
 
--- Write your code and documentation here.
+-- Write your 
+code and documentation here.
 
-```
+SELECT locationid, saledate, SUM(totalsaleamount), SUM(dispensed_fuel_additives_amount), SUM(dispensed_fuel_additives_quantity), SUM(merchandise_amount), SUM(merchandise_quantity)
+FROM factsalestransaction
+GROUP BY locationid, saledate
 
 \newpage
 
 #### Question #3:
 
-While the `factSalesTransaction` table has the `ShipTo` column (a unique ID for a single site), the table does not contain additional location information about the sites.  Location information is stored in the `dimLocation` table.  Please add the following location information to the summarized KPIs from Question #2:
+While the `factSalesTransaction` table has the `ShipTo` column (a unique ID for a single site), the table does not contain additional location information about the sites.  
+Location information is stored in the `dimLocation` table.  Please add the following location information to the summarized KPIs from Question #2:
 
 *   `ShipToState`
 *   `StoreBrand`
@@ -107,7 +116,7 @@ Please query the average annual site performance between `2018-01-01` and `2020-
 
 -- Write your code and documentation here.
 
-```
+NOTE: No data before 2021-04-21, so I queried all available dates instead.
 
 \newpage
 

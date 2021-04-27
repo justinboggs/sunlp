@@ -4,7 +4,7 @@ To-do
 - explore 
 - clean
     - remove nulls DONE
-    - common dates
+    - common dates DONE
 - transform 
 - build models 
 - answer questions 
@@ -24,4 +24,7 @@ dates COMMON 01/01/19-12/31/20
 
 SQL 
 
-To-do 
+To-do
+Split time/date DONE 
+
+
