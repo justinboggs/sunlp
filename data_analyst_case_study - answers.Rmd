@@ -42,7 +42,7 @@ FROM Table_Name
 
 \newpage
 
-#### Question #1:
+#### Question #1: DONE
 
 Please query all of the individual rows for each transaction from the `factSalesTransaction` table.
 
@@ -50,7 +50,8 @@ Please query all of the individual rows for each transaction from the `factSales
 
 -- Write your code and documentation here.
 
-```
+SELECT * FROM factsalestransaction
+
 
 \newpage
 
