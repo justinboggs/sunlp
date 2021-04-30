@@ -31,6 +31,7 @@ Please help fulfill the stakeholder's various requests below.
 
 #### Instructions:
 
+
 You will be provided a file that contains a sample of the database structure.  You will also be given a series of questions in the form of data requests by various stakeholders.  
 Use the Tableau Packaged Workbook provided to create a SQL query that addresses the data request.  Each question should be solved with a single query.  
 If you have any questions, please speak to your hiring manager.
@@ -256,7 +257,8 @@ The Pricing Analyst wants to understand the relationship between competitor pric
 
 #### Question #2:
 
-The Pricing Analyst wants to know how different pricing strategies would affect the amount of Regular fuel sold.  For each site, evaluate how much Regular fuel would be sold over the next 3 months when pricing within a range of \$0.05 below and \$0.05 above the competitor's pricing.
+The Pricing Analyst wants to know how different pricing strategies would affect the amount of Regular fuel sold.  
+For each site, evaluate how much Regular fuel would be sold over the next 3 months when pricing within a range of \$0.05 below and \$0.05 above the competitor's pricing.
 
 ```{r_or_python}
 
@@ -268,7 +270,9 @@ The Pricing Analyst wants to know how different pricing strategies would affect 
 
 #### Question #3:
 
-The Pricing Analyst wants to know how different pricing strategies would affect the amount of profit generated across all the fuel sold at a site.  For each site, determine the price within a range of \$0.05 below and \$0.05 above the competitor's pricing for each fuel grade that maximizes the total profit.  For this question, you can assume cost is constant.
+The Pricing Analyst wants to know how different pricing strategies would affect the amount of profit generated across all the fuel sold at a site.
+For each site, determine the price within a range of \$0.05 below and \$0.05 above the competitor's pricing for each fuel grade that maximizes the total profit.
+For this question, you can assume cost is constant.
 
 ```{r_or_python}
 
