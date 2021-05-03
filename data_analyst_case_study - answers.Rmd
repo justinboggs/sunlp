@@ -157,7 +157,9 @@ print("Hello world!")
 
 The Pricing Analyst comes to you with the following key-performance indicators (KPIs): `site_price`, `site_volume`, `site_profit`, `site_replacement_cost`, and `competitor_pricing`.
 
-The Pricing Analyst needs help cleaning the datasets, as there are inconsistencies across each of them.  For each dataset, please document what the initial error was and how you decided to address it.  Whenever you finalize a new column, please add the suffix `_Adjusted` to the original column name.  For example, the finalized column based on `Profit` would be named `Profit_Adjusted`.
+The Pricing Analyst needs help cleaning the datasets, as there are inconsistencies across each of them.  
+For each dataset, please document what the initial error was and how you decided to address it.  Whenever you finalize a new column, please add the suffix `_Adjusted` to the original column name.  
+For example, the finalized column based on `Profit` would be named `Profit_Adjusted`.
 
 ```{r_or_python}
 
@@ -173,9 +175,12 @@ Site volume has many null values to be removed. DONE
 
 #### Question #2:
 
-Now that the datasets are cleaned, the Pricing Analyst would like you to combine them into a dataset called `site_kpis` and provide summary of the KPIs by site and by fuel grade (`Grade_Description`).  The summaries should include statistical and visualization pieces.  The statistics you choose should provide an initial idea about how the sites are performing.  The the visualizations should illuminate any relationships between each of the KPIs.  For each summary you create, please document any insight you would communicate to the Pricing Analyst.
+Now that the datasets are cleaned, the Pricing Analyst would like you to combine them into a dataset called `site_kpis` and provide summary of the KPIs by site and by fuel grade (`Grade_Description`).  
+The summaries should include statistical and visualization pieces.  The statistics you choose should provide an initial idea about how the sites are performing.  
+The the visualizations should illuminate any relationships between each of the KPIs.  For each summary you create, please document any insight you would communicate to the Pricing Analyst.
 
 ```{r_or_python}
+
 
 # Write your code and documentation here.
 
