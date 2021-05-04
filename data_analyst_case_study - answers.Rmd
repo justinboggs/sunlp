@@ -132,7 +132,7 @@ Now that the datasets are cleaned, the Pricing Analyst would like you to combine
 The summaries should include statistical and visualization pieces.  The statistics you choose should provide an initial idea about how the sites are performing.  
 The the visualizations should illuminate any relationships between each of the KPIs.  For each summary you create, please document any insight you would communicate to the Pricing Analyst.
 
-# Write your code and documentation here.
+10808 underperforming compared to 10818 and 10838. Lots of days of negative profit, especially with unleaded gas.
 
 
 #### Question #3:
@@ -148,19 +148,25 @@ for i, j in site_kpis.dtypes.iteritems():
 
 ```
 
-*    Compute the mean of every `numeric` column in `site_kpis`.
+*    Compute the mean of every `numeric` column in `site_kpis`. DONE 
 
 ```{r_or_python}
 
-# Write your code and documentation here.
+def kpiMean(i):
+    total = 0
+    for j in i:
+        total += j
+    mean= total/ len(i)
+    return mean
 
 ```
 
-*    Compute the number of unique values in each column of `site_kpis`.
+*    Compute the number of unique values in each column of `site_kpis`. DONE 
 
 ```{r_or_python}
 
-# Write your code and documentation here.
+for col in site_kpis:
+    print(site_kpis[col].nunique())
 
 ```
 
